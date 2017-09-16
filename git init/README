@@ -1,0 +1,14 @@
+package com.pack.service;
+
+import java.util.List;
+
+import com.pack.entity.ProxyServerData;
+
+public interface ProxyServersService {
+	void saveProxyServer(String host, String port);
+	void deleteProxyServer(String host);
+	ProxyServerData findRandomProxyServer();
+	List<ProxyServerData> findAll();
+	void saveListProxyServers(List<ProxyServerData> lpsd);
+	void updateProxyServer(String host, Boolean enabled);
+}
